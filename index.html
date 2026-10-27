@@ -199,14 +199,10 @@ f.addEventListener('submit',function(e){
  var reply="Hi "+first+",\n\nThanks for getting in touch with Demo "+N[tr]+". We got your message:\n\n  \""+snip+"\"\n\n"+
  (tr==='realtor'?"Happy to help with this.":"Sorry you're dealing with that, we'll get it sorted.")+" So we can send the right person, could you reply with:\n\n1. "+q[0]+"\n2. "+q[1]+"\n3. "+q[2]+
  "\n\nOr pick a time that suits you here: https://leadloop.whizzyminds.com/book.html\n\nTalk soon,\nThe Demo "+N[tr]+" team\n\n---\nLeadLoop demo: your customers get a reply like this, in your words, within about a minute.";
- b.disabled=true;s.className='';s.textContent='Sending…';
- fetch('https://formsubmit.co/ajax/79afa4e0afae55c52fec726e1f063ea8',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-  body:JSON.stringify({name:name,email:email,trade:tr,message:msg,_subject:'New LeadLoop demo lead: '+name+' ('+tr+')',_template:'table'})})
- .then(function(r){return r.json()}).then(function(d){if(String(d.success)!=='true')throw 0;
-  s.className='ok';s.textContent='Done. Here is the reply your customer would get, word for word:';
-  var o=document.getElementById('out');o.querySelector('.meta').textContent='To: '+email+'  ·  Subject: Re: your enquiry';o.querySelector('pre').textContent=reply;o.hidden=false;o.scrollIntoView({behavior:'smooth',block:'start'})})
- .catch(function(){s.className='err';s.textContent='Something went wrong on our side. Please email whizzyminds.tech@gmail.com and I\'ll reply myself.'})
- .finally(function(){b.disabled=false});
+ s.className='ok';s.textContent='Done. Here is the reply your customer would get, word for word:';
+ var o=document.getElementById('out');o.querySelector('.meta').textContent='To: '+email+'  ·  Subject: Re: your enquiry';o.querySelector('pre').textContent=reply;o.hidden=false;o.scrollIntoView({behavior:'smooth',block:'start'});
+ fetch('https://formsubmit.co/ajax/79afa4e0afae55c52fec726e1f063ea8',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json','Accept':'application/json'},
+  body:JSON.stringify({name:name,email:email,trade:tr,message:msg,_subject:'New LeadLoop demo lead: '+name+' ('+tr+')',_template:'table'})}).catch(function(){});
 });
 })();
 </script>
