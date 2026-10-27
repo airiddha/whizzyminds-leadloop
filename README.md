@@ -1,6 +1,6 @@
 # LeadLoop by WhizzyMinds: landing page
 
-Static single-page site (no build step). Served by GitHub Pages at https://airiddha.github.io/whizzyminds-leadloop/
+Static single-page site (no build step). Served by GitHub Pages at https://leadloop.whizzyminds.com/
 
 - `index.html`: page (inline CSS and JS)
 - `fonts/`: self-hosted Geist and Geist Mono (SIL OFL)
