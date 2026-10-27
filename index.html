@@ -84,13 +84,8 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;font-size:.92rem;col
  </div>
  <div class="card" id="try">
   <h2>Try it on yourself</h2>
-  <p class="small">Pretend you're a customer. Use your real email, and the reply your customers would get lands in your inbox in about a minute.</p>
-  <form id="demo" action="https://formsubmit.co/whizzyminds.tech@gmail.com" method="POST">
-   <input type="hidden" name="_subject" id="subj" value="New LeadLoop demo lead">
-   <input type="hidden" name="_template" value="table">
-   <input type="hidden" name="_next" value="https://leadloop.whizzyminds.com/thanks.html">
-   <input type="hidden" name="_url" value="https://leadloop.whizzyminds.com/">
-   <input type="hidden" name="_autoresponse" id="auto" value="">
+  <p class="small">Pretend you're a customer. Type a real-sounding enquiry and see, instantly, the reply your customers would get.</p>
+  <form id="demo" novalidate>
    <label for="trade">Pretend I'm a…</label>
    <select id="trade" name="trade">
     <option value="plumber">Plumber</option><option value="electrician">Electrician</option><option value="hvac">HVAC / heating</option><option value="realtor">Real estate agent</option>
@@ -104,8 +99,8 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;font-size:.92rem;col
    <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
    <button type="submit" id="go">Send my enquiry</button>
    <p id="status" role="status" aria-live="polite"></p>
-   <p class="small">Next you'll see a quick "I'm not a robot" check from our form provider, then you're done.</p>
-   <p class="small">We use your email only to send this one demo reply, and a copy goes to Airiddha at WhizzyMinds so I can follow up if you ask me to. No mailing list.</p>
+   <div id="out" class="email" hidden><div class="meta"></div><pre style="white-space:pre-wrap;font:inherit;margin:0"></pre></div>
+      <p class="small">Your details come to me, Airiddha, as a lead alert, exactly like they would for you. I won't add you to any list.</p>
   </form>
  </div>
 </div>
@@ -203,8 +198,15 @@ f.addEventListener('submit',function(e){
  var first=name.split(/\s+/)[0],q=Q[tr],snip=msg.length>140?msg.slice(0,137)+'...':msg;
  var reply="Hi "+first+",\n\nThanks for getting in touch with Demo "+N[tr]+". We got your message:\n\n  \""+snip+"\"\n\n"+
  (tr==='realtor'?"Happy to help with this.":"Sorry you're dealing with that, we'll get it sorted.")+" So we can send the right person, could you reply with:\n\n1. "+q[0]+"\n2. "+q[1]+"\n3. "+q[2]+
- "\n\nOr pick a time that suits you here: https://leadloop.whizzyminds.com/book.html\n\nTalk soon,\nThe Demo "+N[tr]+" team\n\n---\nThis is a LeadLoop demo. Your customers would get a reply like this, in your words, about a minute after they contact you. Want it for your business? Just reply to this email. Airiddha, WhizzyMinds Tech LLP, Barbakra, Chhatna, Bankura, West Bengal 722132, India. You won't get any more emails from us unless you reply.";
- document.getElementById('auto').value=reply;document.getElementById('subj').value='New LeadLoop demo lead: '+name+' ('+tr+')';b.disabled=true;b.textContent='Sending…';f.submit();
+ "\n\nOr pick a time that suits you here: https://leadloop.whizzyminds.com/book.html\n\nTalk soon,\nThe Demo "+N[tr]+" team\n\n---\nLeadLoop demo: your customers get a reply like this, in your words, within about a minute.";
+ b.disabled=true;s.className='';s.textContent='Sending…';
+ fetch('https://formsubmit.co/ajax/79afa4e0afae55c52fec726e1f063ea8',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+  body:JSON.stringify({name:name,email:email,trade:tr,message:msg,_subject:'New LeadLoop demo lead: '+name+' ('+tr+')',_template:'table'})})
+ .then(function(r){return r.json()}).then(function(d){if(String(d.success)!=='true')throw 0;
+  s.className='ok';s.textContent='Done. Here is the reply your customer would get, word for word:';
+  var o=document.getElementById('out');o.querySelector('.meta').textContent='To: '+email+'  ·  Subject: Re: your enquiry';o.querySelector('pre').textContent=reply;o.hidden=false;o.scrollIntoView({behavior:'smooth',block:'start'})})
+ .catch(function(){s.className='err';s.textContent='Something went wrong on our side. Please email whizzyminds.tech@gmail.com and I\'ll reply myself.'})
+ .finally(function(){b.disabled=false});
 });
 })();
 </script>
