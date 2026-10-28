@@ -29,7 +29,7 @@ header{border-bottom:1px solid var(--line)}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
 .brand{font-family:Georgia,serif;font-size:1.3rem;font-weight:700;color:var(--ink);text-decoration:none}
 .brand span{color:var(--soft);font-weight:400;font-size:1rem}
-.nav a.cta{font-weight:600;text-decoration:none}
+.nav a.cta{font-weight:600;text-decoration:none;white-space:nowrap}.navr a+a{margin-left:20px}
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;padding:56px 0 64px;align-items:start}
 .lede{font-size:1.2rem;color:var(--soft);max-width:34em}
 .points{list-style:none;padding:0;margin:24px 0 0}
@@ -47,7 +47,10 @@ button[disabled]{opacity:.6;cursor:wait}
 .small{font-size:.9rem;color:var(--soft)}
 .hp{position:absolute;left:-9999px}
 #status{margin-top:14px;font-weight:600}
-#status.ok{color:var(--green)}#status.err{color:#A32D2D}
+#status.ok,.cstatus.ok{color:var(--green)}#status.err,.cstatus.err{color:#A32D2D}
+.cstatus{margin:14px 0 0;font-weight:600}.cstatus:empty{display:none}
+[hidden]{display:none!important}
+#contact,#book{scroll-margin-top:16px}
 section{padding:64px 0;border-top:1px solid var(--line)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
@@ -65,11 +68,11 @@ details p{margin:10px 0 0;color:var(--soft)}
 .jump{display:none}.ticks ul{list-style:none;padding:0;margin:0}.ticks li{padding:12px 0 12px 30px;border-top:1px solid var(--line);position:relative}.ticks li:before{content:"\2713";position:absolute;left:4px;color:var(--green);font-weight:700}
 footer{border-top:1px solid var(--line);padding:36px 0 48px;font-size:.92rem;color:var(--soft)}
 .quote{font-family:Georgia,serif;font-size:1.35rem;line-height:1.45;border-left:3px solid var(--accent);padding-left:18px;margin:0 0 18px}
-@media (max-width:820px){.jump{display:block;margin-top:22px;text-align:center;padding:13px;border-radius:6px;background:var(--accent-d);color:#fff;font-weight:700;text-decoration:none}h1{font-size:2.05rem}.two{gap:20px}.hero,.two,.three,.price,.founder{grid-template-columns:1fr}.hero{padding:32px 0 44px;gap:32px}section{padding:48px 0}}
+@media (max-width:820px){.nav a.try{display:none}.jump{display:block;margin-top:22px;text-align:center;padding:13px;border-radius:6px;background:var(--accent-d);color:#fff;font-weight:700;text-decoration:none}h1{font-size:2.05rem}.two{gap:20px}.hero,.two,.three,.price,.founder{grid-template-columns:1fr}.hero{padding:32px 0 44px;gap:32px}section{padding:48px 0}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="/">LeadLoop <span>by WhizzyMinds</span></a><a class="cta" href="#try">Try it on yourself</a></div></header>
+<header><div class="wrap nav"><a class="brand" href="/">LeadLoop <span>by WhizzyMinds</span></a><span class="navr"><a class="cta" href="#book">Book a call</a><a class="cta try" href="#try">Try it on yourself</a></span></div></header>
 <main>
 <div class="wrap hero">
  <div>
@@ -173,9 +176,45 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;font-size:.92rem;col
  <details><summary>You're in India. What about time zones?</summary><p>The replies run automatically around the clock, so time zones don't matter for your customers. For setup calls, I work evenings in US and Australian time.</p></details>
 </div></section>
 
-<section id="contact"><div class="wrap">
- <h2>Talk to me</h2>
- <p>Email <a href="mailto:whizzyminds.tech@gmail.com?subject=LeadLoop%20for%20my%20business">whizzyminds.tech@gmail.com</a> with your business name and website, and I'll reply the same day with how I'd set it up for you.</p>
+<section id="contact"><div class="wrap two">
+ <div>
+  <h2>Talk to me</h2>
+  <p>Want LeadLoop on your own website, or just have a question? Send me a note here and it comes straight to my inbox. I'll reply the same day with how I'd set it up for you.</p>
+  <h3 id="book" style="margin-top:28px">Book a 15-minute call</h3>
+  <p>There's no self-booking calendar yet, so it works the old-fashioned way: choose <strong>A 15-minute call</strong> in the form, give me two or three times that suit you with your time zone, and I'll email back to confirm one. Phone or video, whichever you prefer.</p>
+  <p class="small">Prefer plain email? Write to <a href="mailto:whizzyminds.tech@gmail.com?subject=LeadLoop%20for%20my%20business">whizzyminds.tech@gmail.com</a>, or <a href="mailto:whizzyminds.tech@gmail.com?subject=Request%20a%2015-minute%20call%20about%20LeadLoop&amp;body=Hi%20Airiddha%2C%0A%0AI%27d%20like%20a%2015-minute%20call%20about%20LeadLoop.%0A%0ABusiness%20and%20website%3A%20%0ATimes%20that%20suit%20me%20(with%20time%20zone)%3A%20%0APhone%20(optional)%3A%20%0A%0AThanks">request a call by email</a>.</p>
+ </div>
+ <div class="card">
+  <form id="contact-form" action="https://formsubmit.co/79afa4e0afae55c52fec726e1f063ea8" method="POST">
+   <input type="hidden" name="_subject" value="LeadLoop enquiry from the website">
+   <input type="hidden" name="_template" value="table">
+   <input type="hidden" name="_next" value="https://leadloop.whizzyminds.com/message-sent.html">
+   <label for="c-want" style="margin-top:0">I'd like…</label>
+   <select id="c-want" name="request">
+    <option value="15-minute call">A 15-minute call</option>
+    <option value="Sample reply for my business">A sample reply written for my business</option>
+    <option value="Question">To ask a question</option>
+   </select>
+   <label for="c-name">Your name</label>
+   <input id="c-name" name="name" autocomplete="name" required maxlength="120">
+   <label for="c-biz">Business name and website</label>
+   <input id="c-biz" name="business" autocomplete="organization" required maxlength="200" placeholder="e.g. Dalton Plumbing, daltonplumbing.com">
+   <label for="c-email">Email</label>
+   <input id="c-email" name="email" type="email" autocomplete="email" required maxlength="200">
+   <label for="c-phone">Phone <span class="small" style="font-weight:400">(optional)</span></label>
+   <input id="c-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+   <div id="c-when-wrap">
+    <label for="c-when">Two or three times that suit you, with your time zone</label>
+    <input id="c-when" name="preferred_times" maxlength="200" placeholder="e.g. Tue or Wed, 9 to 11am Eastern">
+   </div>
+   <label for="c-msg">Short message</label>
+   <textarea id="c-msg" name="message" maxlength="2000" placeholder="What kind of enquiries do you get, and how do you handle them today?"></textarea>
+   <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <button type="submit" id="c-go">Send</button>
+   <p id="c-status" class="cstatus" role="status" aria-live="polite"></p>
+   <p class="small" style="margin:12px 0 0">I'll only use your details to answer this message. No mailing list.</p>
+  </form>
+ </div>
 </div></section>
 </main>
 <footer><div class="wrap">WhizzyMinds Tech LLP · Barbakra, Chhatna, Bankura, West Bengal 722132, India · <a href="mailto:whizzyminds.tech@gmail.com">whizzyminds.tech@gmail.com</a></div></footer>
@@ -203,6 +242,35 @@ f.addEventListener('submit',function(e){
  var o=document.getElementById('out');o.querySelector('.meta').textContent='To: '+email+'  ·  Subject: Re: your enquiry';o.querySelector('pre').textContent=reply;o.hidden=false;o.scrollIntoView({behavior:'smooth',block:'start'});
  fetch('https://formsubmit.co/ajax/79afa4e0afae55c52fec726e1f063ea8',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json','Accept':'application/json'},
   body:JSON.stringify({name:name,email:email,trade:tr,message:msg,_subject:'New LeadLoop demo lead: '+name+' ('+tr+')',_template:'table'})}).catch(function(){});
+});
+})();
+</script>
+<script>
+(function(){
+var f=document.getElementById('contact-form'),s=document.getElementById('c-status'),b=document.getElementById('c-go'),
+    w=document.getElementById('c-want'),ww=document.getElementById('c-when-wrap'),MAIL='whizzyminds.tech@gmail.com';
+function sync(){ww.hidden=w.value!=='15-minute call'}
+w.addEventListener('change',sync);sync();
+[].forEach.call(document.querySelectorAll('a[href="#book"]'),function(a){a.addEventListener('click',function(){w.value='15-minute call';sync()})});
+if(location.hash==='#book'){w.value='15-minute call';sync()}
+function v(n){return(f.elements[n]&&f.elements[n].value.trim())||''}
+function mailto(){return 'mailto:'+MAIL+'?subject='+encodeURIComponent('LeadLoop: '+v('request'))+'&body='+encodeURIComponent('Name: '+v('name')+'\nBusiness: '+v('business')+'\nEmail: '+v('email')+'\nPhone: '+v('phone')+'\nTimes that suit me: '+v('preferred_times')+'\n\n'+v('message'))}
+f.addEventListener('submit',function(e){
+ if(!window.fetch)return;
+ e.preventDefault();
+ if(f._honey.value){s.className='cstatus ok';s.textContent='Thanks, your message has been sent.';return}
+ var d={};['request','name','business','email','phone','message'].forEach(function(k){d[k]=v(k)});
+ if(!ww.hidden)d.preferred_times=v('preferred_times');
+ d._subject='LeadLoop website: '+d.request+' from '+d.name+(d.business?' ('+d.business+')':'');d._template='table';d._honey='';
+ b.disabled=true;s.className='cstatus';s.textContent='';
+ fetch(f.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
+  .then(function(r){return r.json()})
+  .then(function(j){
+   if(j&&(j.success===true||j.success==='true')){f.reset();sync();s.className='cstatus ok';s.textContent='Thanks, '+(d.name.split(/\s+/)[0]||'')+'. Your message is in my inbox and I\'ll reply from '+MAIL+(d.request==='15-minute call'?' to confirm a time.':'.')}
+   else throw 0;
+  })
+  .catch(function(){s.className='cstatus err';s.innerHTML='Sorry, that didn\'t send. Your details are still filled in. Please <a href="'+mailto()+'">send them by email instead</a>, or write to <a href="mailto:'+MAIL+'">'+MAIL+'</a>.'})
+  .then(function(){b.disabled=false});
 });
 })();
 </script>
