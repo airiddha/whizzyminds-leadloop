@@ -13,9 +13,9 @@
 <meta property="og:url" content="https://leadloop.whizzyminds.com/">
 <meta property="og:image" content="https://leadloop.whizzyminds.com/og.png">
 <meta name="theme-color" content="#FBF7F0">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="preload" href="/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face { font-family: 'Instrument Sans'; font-style: normal; font-weight: 400; font-stretch: 100%; font-display: swap; src: url(/fonts/instrument-sans.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Instrument Sans'; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url(/fonts/instrument-sans.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Instrument Sans'; font-style: normal; font-weight: 600; font-stretch: 100%; font-display: swap; src: url(/fonts/instrument-sans.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Newsreader'; font-style: italic; font-weight: 400; font-display: swap; src: url(/fonts/newsreader-italic.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/newsreader.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/newsreader.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 :root{--bg:#F6F1E8;--bg2:#EFE7DA;--paper:#FFFDF9;--ink:#1C1915;--ink2:#3A342D;--soft:#6B6157;--line:#E2D8C8;--line2:#D3C6B2;--accent:#A7461F;--accent-d:#8A3816;--green:#2F6B4F;--dark:#1E1B17;
 --serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--r:12px}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -138,10 +138,10 @@ details p{margin:0 0 24px;color:var(--ink2);max-width:40em}
 footer{background:var(--dark);color:#B9AE9F;font-size:.92rem;padding:72px 0 40px}
 footer a{color:#E9E2D6;text-decoration:none}footer a:hover{text-decoration:underline}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:48px;border-bottom:1px solid #3A352E}
-.fgrid h4{font:600 .72rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#8C8173;margin:0 0 18px}
+.fgrid h4{font:600 .72rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#ADA294;margin:0 0 18px}
 .fgrid ul{list-style:none;padding:0;margin:0}.fgrid li{margin:0 0 10px}
 .fbrand b{font:500 1.7rem/1 var(--serif);color:#FBF6EE;display:block;margin-bottom:14px}
-.fbot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;font-size:.84rem;color:#8C8173}
+.fbot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;font-size:.84rem;color:#ADA294}
 .jump{display:none}
 .tlink{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);text-decoration:none;padding:15px 6px;border-bottom:1px solid transparent}.tlink:hover{color:var(--accent-d)}
 .heroctas{align-items:center}
