@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>New client setup | LeadLoop by WhizzyMinds</title>
+<meta name="description" content="Setup form for new LeadLoop clients: tell us how your business handles enquiries so we can set up your instant replies and lead alerts.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://leadloop.whizzyminds.com/onboarding.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#F6F1E8">
+<link rel="preload" href="/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: 'Instrument Sans'; font-style: normal; font-weight: 400; font-stretch: 100%; font-display: swap; src: url(/fonts/instrument-sans.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Instrument Sans'; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url(/fonts/instrument-sans.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Instrument Sans'; font-style: normal; font-weight: 600; font-stretch: 100%; font-display: swap; src: url(/fonts/instrument-sans.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Newsreader'; font-style: italic; font-weight: 400; font-display: swap; src: url(/fonts/newsreader-italic.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/newsreader.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Newsreader'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/newsreader.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+:root{--bg:#F6F1E8;--bg2:#EFE7DA;--paper:#FFFDF9;--ink:#1C1915;--ink2:#3A342D;--soft:#6B6157;--line:#E2D8C8;--line2:#D3C6B2;--accent:#A7461F;--accent-d:#8A3816;--green:#2F6B4F;--dark:#1E1B17;
+--serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;--r:12px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--ink);margin:0}
+h1{font-size:clamp(2.5rem,4.9vw,3.9rem);line-height:1.02;letter-spacing:-.025em}
+h2{font-size:clamp(2rem,3.6vw,2.9rem);line-height:1.08;letter-spacing:-.02em}
+h3{font-size:1.35rem;line-height:1.25;letter-spacing:-.01em;font-weight:500}
+em{font-style:italic}h1 em,h2 em{color:var(--accent)}
+p{margin:0 0 1em}a{color:var(--accent-d);text-underline-offset:3px;text-decoration-thickness:1px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:24px;padding-right:24px}
+.eyebrow{font:600 .78rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-d);margin:0 0 20px;display:flex;align-items:center;gap:10px}
+.eyebrow:before{content:"";width:22px;height:1px;background:currentColor}
+/* header */
+header{position:sticky;top:0;z-index:5;background:rgba(246,241,232,.92);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:68px}
+.brand{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--ink)}
+.brand b{font:500 1.5rem/1 var(--serif);letter-spacing:-.02em}
+.brand span{font-size:.82rem;color:var(--soft)}
+.navr{display:flex;align-items:center;gap:28px}
+.navr a.lnk{color:var(--ink2);text-decoration:none;font-size:.95rem;font-weight:500}.navr a.lnk:hover{color:var(--accent-d)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 1rem/1 var(--sans);text-decoration:none;border-radius:999px;padding:15px 24px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;transition:background .15s,transform .15s,box-shadow .15s}
+.btn:hover{background:#000;box-shadow:0 6px 18px -8px rgba(0,0,0,.4)}.btn:active{transform:translateY(1px)}
+.btn.sm{padding:10px 18px;font-size:.92rem}
+.btn.ghost{background:transparent;color:var(--ink)}.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.acc{background:var(--accent-d);border-color:var(--accent-d)}.btn.acc:hover{background:#6F2C10}
+.btn .ar{transition:transform .15s}.btn:hover .ar{transform:translateX(3px)}
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;padding-top:80px;padding-bottom:96px;align-items:start}
+.lede{font-size:1.2rem;line-height:1.55;color:var(--ink2);max-width:31em;margin:28px 0 0}
+.facts{margin:40px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line2)}
+.facts div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line2);font-size:.98rem;color:var(--ink2)}
+.facts dt{font:600 .75rem/1.9 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.facts dd{margin:0}
+.heroctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+/* demo card */
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 1px 0 rgba(28,25,21,.04),0 24px 48px -32px rgba(60,40,20,.28)}
+.demo{position:sticky;top:96px;overflow:hidden}
+.demo-h{padding:22px 28px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.demo-h h2{font-size:1.6rem;line-height:1.1}
+.live{font:600 .72rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:7px;white-space:nowrap}
+.live:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+.demo-b{padding:22px 28px 26px}
+.demo-b>.small:first-child{margin-bottom:6px}
+label{display:block;font-weight:600;font-size:.88rem;color:var(--ink2);margin:18px 0 7px}
+input,textarea,select{width:100%;font:inherit;font-size:16px;line-height:1.4;padding:13px 14px;border:1px solid var(--line2);border-radius:8px;background:#fff;color:var(--ink);transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none}
+select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236B6157' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 16px center;padding-right:40px}
+input::placeholder,textarea::placeholder{color:#A89C8C}
+input:hover,textarea:hover,select:hover{border-color:#BBAC96}
+input:focus,textarea:focus,select:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 4px rgba(167,70,31,.14)}
+textarea{min-height:104px;resize:vertical}
+form button{margin-top:22px;width:100%;font:600 1.02rem/1 var(--sans);padding:17px;border:0;border-radius:999px;background:var(--accent-d);color:#fff;cursor:pointer;transition:background .15s,box-shadow .15s}
+form button:hover{background:#6F2C10;box-shadow:0 8px 20px -10px rgba(138,56,22,.6)}
+form button:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+button[disabled]{opacity:.6;cursor:wait}
+.small{font-size:.88rem;line-height:1.5;color:var(--soft)}
+.fine{font-size:.82rem;color:var(--soft);margin:16px 0 0;line-height:1.5}
+.hp{position:absolute;left:-9999px}
+#status{margin:16px 0 0;font-weight:600;font-size:.95rem}#status:empty{display:none}
+#status.ok,.cstatus.ok{color:var(--green)}#status.err,.cstatus.err{color:#A32D2D}
+.cstatus{margin:14px 0 0;font-weight:600}.cstatus:empty{display:none}
+[hidden]{display:none!important}
+#contact,#book,#try,#pricing{scroll-margin-top:84px}
+/* email */
+.email{background:#fff;border:1px solid var(--line);border-radius:10px;font-size:.96rem;overflow:hidden}
+.email .meta{display:grid;grid-template-columns:62px 1fr;row-gap:4px;padding:14px 18px;border-bottom:1px solid var(--line);background:#FBF8F3;font-size:.84rem;color:var(--soft)}
+.email .meta b{font-weight:500;color:var(--ink);overflow-wrap:anywhere}
+.email .bodyx{padding:18px 18px 6px}
+.email .bodyx p{margin:0 0 .85em}
+#out{margin-top:18px;border-color:#BFD5C8;animation:in .35s ease-out}
+#out .meta{background:#F1F7F3}
+#out pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:.95rem;line-height:1.6;margin:0;padding:18px;color:var(--ink2)}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* sections */
+section{padding:112px 0}
+.s-alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.s-dark{background:var(--dark);color:#E9E2D6}
+.s-dark h2,.s-dark h3{color:#FBF6EE}.s-dark .eyebrow{color:#E09A72}.s-dark .small{color:#A99E8F}.s-dark a{color:#F0B48F}
+.shead{max-width:640px;margin-bottom:56px}
+.shead p{font-size:1.1rem;color:var(--ink2);margin:18px 0 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink)}
+.step{padding:28px 32px 0 0}.step+.step{padding-left:32px;border-left:1px solid var(--line2)}
+.step .n{font:400 .95rem/1 var(--serif);font-style:italic;color:var(--accent);display:block;margin-bottom:28px}
+.step h3{margin-bottom:12px}.step p{color:var(--ink2);margin:0}
+.stat{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+.big{font:400 clamp(6rem,14vw,10.5rem)/.85 var(--serif);letter-spacing:-.05em;color:#FBF6EE}
+.big small{font-size:.45em;color:#E09A72;letter-spacing:0}
+.stat p{font-size:1.15rem;line-height:1.6;max-width:36em}
+.src{border-top:1px solid #3A352E;margin-top:28px;padding-top:16px}
+.ex{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:center}
+.ticks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-top:1px solid var(--line2)}
+.ticks li{padding:20px 0 20px 34px;border-bottom:1px solid var(--line2);position:relative;color:var(--ink2)}
+.ticks li:before{content:"";position:absolute;left:2px;top:27px;width:14px;height:8px;border-left:1.6px solid var(--green);border-bottom:1.6px solid var(--green);transform:rotate(-45deg)}
+.founder{display:grid;grid-template-columns:260px 1fr;gap:72px;align-items:start}
+.photo{aspect-ratio:4/5;width:100%;border:1px dashed var(--line2);border-radius:var(--r);display:flex;align-items:flex-end;padding:18px;color:var(--soft);font-size:.85rem;background:repeating-linear-gradient(135deg,#EFE7DA 0 1px,transparent 1px 9px),var(--bg2)}
+.quote{font:400 clamp(1.5rem,2.6vw,2.05rem)/1.3 var(--serif);letter-spacing:-.01em;margin:28px 0 28px;color:var(--ink)}
+.founder .prose p{color:var(--ink2);max-width:36em}
+.sig{display:flex;gap:14px;align-items:center;border-top:1px solid var(--line2);padding-top:20px;margin-top:28px}
+.sig b{font:500 1.15rem var(--serif)}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pc{padding:36px}
+.pc .k{font:600 .75rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.amt{font:400 4rem/1 var(--serif);letter-spacing:-.03em;margin:20px 0 16px}
+.amt span{font:500 1rem var(--sans);color:var(--soft);letter-spacing:0}
+.pc p{color:var(--ink2);margin:0;border-top:1px solid var(--line);padding-top:18px}
+.pnote{margin-top:24px;font-size:.95rem;color:var(--ink2)}
+.faq{max-width:820px}
+details{border-bottom:1px solid var(--line2)}details:first-of-type{border-top:1px solid var(--ink)}
+summary{list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;font:400 1.3rem/1.35 var(--serif);letter-spacing:-.01em}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;margin-top:-9px;border-right:1.6px solid var(--ink);border-bottom:1.6px solid var(--ink);transform:rotate(45deg);transition:transform .2s}
+details[open] summary:after{transform:rotate(-135deg);margin-top:-3px}
+details p{margin:0 0 24px;color:var(--ink2);max-width:40em}
+.contact .prose p{color:var(--ink2)}
+.bookbox{margin-top:36px;padding:24px;border:1px solid var(--line2);border-radius:var(--r)}
+.bookbox h3{margin-bottom:10px}
+.cform{padding:32px}
+.cform label:first-of-type{margin-top:0}
+footer{background:var(--dark);color:#B9AE9F;font-size:.92rem;padding:72px 0 40px}
+footer a{color:#E9E2D6;text-decoration:none}footer a:hover{text-decoration:underline}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:48px;border-bottom:1px solid #3A352E}
+.fgrid h4{font:600 .72rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#ADA294;margin:0 0 18px}
+.fgrid ul{list-style:none;padding:0;margin:0}.fgrid li{margin:0 0 10px}
+.fbrand b{font:500 1.7rem/1 var(--serif);color:#FBF6EE;display:block;margin-bottom:14px}
+.fbot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;font-size:.84rem;color:#ADA294}
+.jump{display:none}
+.tlink{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);text-decoration:none;padding:15px 6px;border-bottom:1px solid transparent}.tlink:hover{color:var(--accent-d)}
+.heroctas{align-items:center}
+.pd{background:var(--dark);border-color:var(--dark);color:#E9E2D6}.pd .k,.pd .amt span{color:#A99E8F}.pd .amt{color:#FBF6EE}.pd p{color:#D8CFC2;border-top-color:#3A352E}
+.eyebrow{flex-wrap:nowrap}
+@media (max-width:900px){
+ .hero,.two,.ex,.founder,.stat,.contact{grid-template-columns:1fr}
+ .hero{gap:48px;padding-top:44px;padding-bottom:64px}.demo{position:static}
+ .steps{grid-template-columns:1fr;border-top:0}.step,.step+.step{padding:24px 0;border-left:0;border-top:1px solid var(--line2)}.step:first-child{border-top-color:var(--ink)}.step .n{margin-bottom:14px}
+ .ticks{grid-template-columns:1fr}.price{grid-template-columns:1fr}
+ .fgrid{grid-template-columns:1fr 1fr}.fbrand{grid-column:1/-1}
+ section{padding:72px 0}.shead{margin-bottom:36px}.two,.ex,.founder,.stat{gap:40px}
+ .founder .photo{max-width:150px;padding:12px;font-size:.78rem}
+}
+@media (max-width:600px){
+ .wrap{padding-left:22px;padding-right:22px}
+ body{font-size:16.5px}
+ h1{font-size:2.6rem;line-height:1.04}h2{font-size:2.05rem}
+ .navr a.lnk{display:none}.brand span{display:none}.nav{height:60px}
+ .lede{font-size:1.1rem;margin-top:22px}
+ .facts{margin-top:32px}.facts div{grid-template-columns:1fr;gap:4px;padding:14px 0}
+ .heroctas{margin-top:28px;gap:4px}.heroctas .btn{width:100%}.heroctas .tlink{width:100%;justify-content:center}
+ .demo-h,.demo-b{padding-left:20px;padding-right:20px}.demo-h h2{font-size:1.45rem}
+ .cform,.pc{padding:24px 20px}.amt{font-size:3.4rem}
+ summary{font-size:1.15rem;padding:20px 36px 20px 0}
+ .big{font-size:7.5rem}
+ .fgrid{grid-template-columns:1fr;gap:32px}
+ #contact,#book,#try,#pricing{scroll-margin-top:72px}
+}
+
+.page{padding:64px 0 96px}.ihead{max-width:40em;margin-bottom:40px}.ihead .lede{margin-top:20px}
+.ilay{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+.iform{padding:32px 36px 36px}
+fieldset{border:0;padding:0;margin:0 0 8px}fieldset+fieldset{border-top:1px solid var(--line);margin-top:28px;padding-top:4px}
+legend{font:500 1.35rem/1.25 var(--serif);padding:0;margin:28px 0 2px}
+fieldset:first-of-type legend{margin-top:0}
+.hint{font-size:.84rem;color:var(--soft);margin:6px 0 0;line-height:1.45}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.opts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:4px}
+.opts label{display:flex;align-items:center;gap:8px;font-weight:500;margin:6px 0;font-size:.95rem}
+.opts input{width:18px;height:18px;padding:0;-webkit-appearance:auto;appearance:auto;accent-color:var(--accent-d)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.92rem;margin-top:24px}
+.consent input{width:18px;height:18px;margin-top:3px;flex:none;padding:0;-webkit-appearance:auto;appearance:auto;accent-color:var(--accent-d)}
+.side{position:sticky;top:96px;padding:26px 26px 22px;font-size:.94rem}
+.side h3{margin-bottom:12px}.side ol{padding-left:20px;margin:0 0 16px}.side li{margin:0 0 8px}
+.note{background:var(--bg2);border-radius:8px;padding:14px 16px;font-size:.9rem;margin:0 0 18px}
+@media (max-width:900px){.ilay{grid-template-columns:1fr}.side{position:static;order:-1}}
+@media (max-width:600px){.iform{padding:24px 20px}.row2{grid-template-columns:1fr}.page{padding:40px 0 72px}}
+</style>
+</head><body>
+<header><div class="wrap nav"><a class="brand" href="/"><b>LeadLoop</b><span>by WhizzyMinds</span></a><nav class="navr"><a class="lnk" href="/#how">How it works</a><a class="lnk" href="/#pricing">Pricing</a><a class="btn sm ghost" href="/#book">Book a call</a></nav></div></header>
+<main class="page"><div class="wrap">
+<div class="ihead"><p class="eyebrow">New client setup</p><h1>Tell me how your business <em>handles enquiries</em></h1>
+<p class="lede">This is the form new LeadLoop clients fill in after we agree to work together. It takes about five minutes. I use it to set up your instant replies and lead alerts, then I send you test enquiries to check before anything goes live.</p></div>
+<div class="ilay">
+<form id="intake" class="card iform" action="https://formsubmit.co/79afa4e0afae55c52fec726e1f063ea8" method="POST">
+<input type="hidden" name="_subject" value="LeadLoop client intake">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://leadloop.whizzyminds.com/intake-received.html">
+<input type="hidden" name="form" value="client intake">
+
+<fieldset><legend>Your business</legend>
+<div class="row2"><div><label for="business">Business name</label><input id="business" name="business" required autocomplete="organization"></div>
+<div><label for="website">Website</label><input id="website" name="website" type="url" placeholder="https://" required></div></div>
+<div class="row2"><div><label for="trade">What you do</label><select id="trade" name="trade" required><option value="">Choose one</option><option>Plumbing</option><option>Electrical</option><option>HVAC / air conditioning</option><option>Roofing</option><option>Landscaping</option><option>Pest control</option><option>Cleaning</option><option>Real estate</option><option>Other trade or service</option></select></div>
+<div><label for="country">Country and time zone</label><input id="country" name="country_timezone" placeholder="e.g. Australia, Brisbane time" required></div></div>
+<label for="hours">Hours you normally answer the phone</label><input id="hours" name="business_hours" placeholder="e.g. Mon to Fri 7am to 5pm, Sat mornings">
+</fieldset>
+
+<fieldset><legend>Who gets the alerts</legend>
+<div class="row2"><div><label for="owner">Your first name</label><input id="owner" name="owner_name" required autocomplete="given-name"></div>
+<div><label for="alert_email">Email for new-lead alerts</label><input id="alert_email" name="alert_email" type="email" required autocomplete="email"></div></div>
+<label for="mobile">Mobile for text alerts (optional)</label><input id="mobile" name="alert_mobile" type="tel" placeholder="With country code, e.g. +61 4xx xxx xxx" autocomplete="tel">
+<label>Text alerts for hot leads?</label>
+<div class="opts"><label><input type="radio" name="sms_alerts" value="yes"> Yes, text me</label><label><input type="radio" name="sms_alerts" value="no" checked> Email is enough</label></div>
+<p class="hint">Texts go through your own Twilio account, which costs a few cents per message. I help you set it up on our call.</p>
+</fieldset>
+
+<fieldset><legend>Where your leads come from</legend>
+<div class="opts">
+<label><input type="checkbox" name="lead_sources" value="website form"> Website contact form</label>
+<label><input type="checkbox" name="lead_sources" value="email inbox"> Emails to my inbox</label>
+<label><input type="checkbox" name="lead_sources" value="Google Business Profile"> Google Business Profile</label>
+<label><input type="checkbox" name="lead_sources" value="Facebook or Instagram"> Facebook or Instagram</label>
+<label><input type="checkbox" name="lead_sources" value="listing portals"> Listing portals</label>
+<label><input type="checkbox" name="lead_sources" value="other"> Other</label></div>
+<label for="formtool">What your website form is built with</label><select id="formtool" name="form_tool"><option value="">Choose one, or "not sure"</option><option>WordPress: Contact Form 7</option><option>WordPress: WPForms</option><option>WordPress: Gravity Forms</option><option>WordPress: Elementor form</option><option>Wix</option><option>Squarespace</option><option>Webflow</option><option>Shopify</option><option>Custom-built form</option><option>Not sure</option></select>
+<label for="leads">Roughly how many enquiries you get a week</label><input id="leads" name="leads_per_week" placeholder="A rough guess is fine">
+</fieldset>
+
+<fieldset><legend>Your replies</legend>
+<div class="row2"><div><label for="from_email">Address replies should come from</label><input id="from_email" name="reply_from_address" type="email" placeholder="e.g. hello@yourbusiness.com"></div>
+<div><label for="provider">Who hosts that email</label><select id="provider" name="email_provider"><option value="">Choose one</option><option>Gmail or Google Workspace</option><option>Microsoft 365 or Outlook</option><option>My web host (cPanel etc.)</option><option>Other</option><option>Not sure</option></select></div></div>
+<label for="booking">Booking link, or the best way for leads to reach you</label><input id="booking" name="booking_link" placeholder="Calendly or Google booking link, or &quot;call us on ...&quot;">
+<label for="always">Anything the reply should always say</label><textarea id="always" name="always_say" placeholder="e.g. We service the inner west only. Free quotes. Emergency line after hours."></textarea>
+<label for="never">Anything it must never say</label><textarea id="never" name="never_say" placeholder="e.g. Don't mention prices. Don't promise same-day visits."></textarea>
+<label>Send one polite follow-up after 24 hours?</label>
+<div class="opts"><label><input type="radio" name="followup_24h" value="yes"> Yes</label><label><input type="radio" name="followup_24h" value="no" checked> No, one reply is enough</label></div>
+<p class="hint">It goes to every lead who got a reply, including ones you've already called, so most owners leave it off.</p>
+</fieldset>
+
+<fieldset><legend>Anything else</legend>
+<label for="notes">Questions or notes</label><textarea id="notes" name="notes"></textarea>
+</fieldset>
+<input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="consent"><input type="checkbox" name="agree" value="yes" required> I understand the auto-reply always says it is automated, and nothing goes live until I've approved the test replies.</label>
+<button type="submit">Send my setup details</button>
+<p id="istatus" class="cstatus" role="status" aria-live="polite"></p>
+<p class="fine">Please don't put passwords in this form. If your email needs an app password, I'll walk you through creating one on our call, and you type it in yourself.</p>
+</form>
+<aside class="card side"><h3>What happens next</h3>
+<ol><li>I read your answers and email you within one business day if anything is unclear.</li><li>On a short call, we connect your form and email. You keep ownership of every account.</li><li>I send three test enquiries and you see exactly what your customers will get.</li><li>You approve it, and it goes live.</li></ol>
+<p class="note">Haven't agreed a setup with me yet? Start with the <a href="/#try">live demo</a> or <a href="/#book">book a 15-minute call</a> instead.</p>
+<p class="small" style="margin:0">Questions: <a href="mailto:whizzyminds.tech@gmail.com">whizzyminds.tech@gmail.com</a></p></aside>
+</div></div></main>
+<footer><div class="wrap">
+ <div class="fgrid">
+  <div class="fbrand"><b>LeadLoop</b><p style="margin:0;max-width:22em">Instant, friendly replies to every enquiry, for trade and real estate businesses. A WhizzyMinds product.</p></div>
+  <div><h4>Product</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/#try">Try the demo</a></li><li><a href="/#pricing">Pricing</a></li></ul></div>
+  <div><h4>Contact</h4><ul><li><a href="/#book">Book a call</a></li><li><a href="/#contact">Send a message</a></li><li><a href="mailto:whizzyminds.tech@gmail.com">whizzyminds.tech@gmail.com</a></li></ul></div>
+  <div><h4>Company</h4><p style="margin:0">WhizzyMinds Tech LLP<br>Barbakra, Chhatna, Bankura<br>West Bengal 722132, India</p></div>
+ </div>
+ <div class="fbot"><span>&copy; 2026 WhizzyMinds Tech LLP</span><span>Built and run in Bankura, India.</span></div>
+</div></footer>
+<script>
+(function(){var f=document.getElementById('intake'),s=document.getElementById('istatus'),b=f.querySelector('button');
+f.addEventListener('submit',function(e){e.preventDefault();if(!f.reportValidity())return;
+if(f._honey.value){s.className='cstatus ok';s.textContent='Thanks, your details have been sent.';return}
+var d={},fd=new FormData(f);fd.forEach(function(v,k){if(k==='_next')return;v=String(v).trim();if(!v)return;d[k]=d[k]?d[k]+', '+v:v});
+d._subject='LeadLoop client intake: '+(d.business||'')+' ('+(d.trade||'')+')';d._template='table';d._honey='';d._replyto=d.alert_email||'';
+b.disabled=true;s.className='cstatus';s.textContent='Sending...';
+fetch(f.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
+.then(function(r){return r.json()}).then(function(j){if(String(j.success)!=='true')throw 0;location.href='/intake-received.html'})
+.catch(function(){b.disabled=false;s.className='cstatus err';s.innerHTML='That didn\'t go through. Please try again, or email your answers to <a href="mailto:whizzyminds.tech@gmail.com?subject=LeadLoop%20client%20intake">whizzyminds.tech@gmail.com</a>.'})});
+})();
+</script>
+</body></html>
